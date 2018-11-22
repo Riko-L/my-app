@@ -1,9 +1,14 @@
-<mat-grid-list cols="7" rowHeight="100px">
-  <mat-grid-tile
-      *ngFor="let tile of tiles"
-      [colspan]="1"
-      [rowspan]="tile.rows"
-      [style.background]="tile.color">
-    {{tile.text}}
+<mat-grid-list *ngFor="let week of weeks" cols="7" rowHeight="3:2">
+  <mat-grid-tile *ngFor="let day of week">
+      
+    <span class="eventsDay"  > {{ day.mDate.format('DD') }}</span>
+    <mat-icon matBadge="{{day.events.length}}" matBadgeColor="warn" *ngIf="day.events.length">event</mat-icon>
+      <!-- <div class="eventsList" *ngFor="let event of day.events">
+         
+          <span class="events" role="listitem">{{event.title}}</span>
+          <span class="events" role="listitem">{{event.location}}</span>
+          <span class="events" role="listitem">{{event.start_time | date : 'hh:mm'}} => {{event.end_time | date : 'hh:mm'}}</span>
+      </div> -->
+
   </mat-grid-tile>
 </mat-grid-list>

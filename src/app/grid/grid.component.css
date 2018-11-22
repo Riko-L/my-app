@@ -1,0 +1,26 @@
+.mat-grid-tile{
+    background-color: darkslategrey;
+    border: 1px solid deeppink;
+}
+
+.mat-grid-tile:hover{
+    background-color:deeppink ;
+    cursor: pointer;
+}
+
+.events{
+    text-align: center; 
+}
+
+.eventsDay{
+    font-size: 3em;
+}
+.eventsList{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    
+}
